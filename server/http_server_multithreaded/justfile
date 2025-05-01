@@ -1,0 +1,27 @@
+build:
+    g++ -std=c++20 -pthread -o build/server src/main.cpp
+
+run:
+    ./build/server &
+
+test-root:
+    curl -v http://localhost:8080/
+
+upload:
+    curl -X POST -H "filename: uploaded.txt" --data "This is the content of the uploaded file." http://localhost:8080/upload
+
+check-upload:
+    cat server/uploaded.txt
+
+create-static:
+    mkdir -p server && echo "static content meow." > server/test.txt
+
+test-static:
+    curl http://localhost:8080/static/test.txt
+
+kill:
+    killall server || true
+
+clean:
+    rm -rf build
+
