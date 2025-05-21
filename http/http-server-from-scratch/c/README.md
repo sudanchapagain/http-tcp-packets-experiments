@@ -4,16 +4,16 @@
 
 ## Basics
 
-A **socket** is an endpoint for sending or receiving data across a computer
-network. It is defined by an **IP** address and a port number. In this case,
-we're using TCP sockets for reliable communication. The **Transmission Control
-Protocol** (TCP) is part of the Internet Protocol Suite (TCP/IP). It is a
+A socket is an endpoint for sending or receiving data across a computer
+network. It is defined by an IP address and a port number. In this case,
+we're using TCP sockets for reliable communication. The Transmission Control
+Protocol (TCP) is part of the Internet Protocol Suite (TCP/IP). It is a
 connection-oriented protocol that ensures data is sent and received reliably and
 in order.
 
 ## What is HTTP?
 
-The **Hypertext Transfer Protocol** (HTTP) is an application layer protocol used
+The Hypertext Transfer Protocol (HTTP) is an application layer protocol used
 for transmitting hypermedia documents, such as HTML. It is stateless, meaning
 each request from a client is treated as an independent transaction, without any
 context from previous requests.
@@ -22,13 +22,13 @@ context from previous requests.
 
 ## HTTP Request and Response Structure
 
-**Request**: An HTTP request typically includes:
+request: An HTTP request typically includes:
 - Method: (e.g., GET, POST) indicates the desired action. [for more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
 - Path: The resource being requested (e.g., `/index.html`).
 - Headers: Additional information about the request (e.g., `Accept-Encoding`). [for more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
 - Body: (optional) Contains data sent by the client, primarily in POST requests.
 
-**Response**: An HTTP response includes:
+response: An HTTP response includes:
 - Status Line: Indicates the status of the response (e.g., `HTTP/1.1 200 OK`). [for more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 - Headers: Information about the response (e.g., `Content-Type`, `Content-Encoding`).
 - Body: The actual content being returned (e.g., HTML, JSON).
