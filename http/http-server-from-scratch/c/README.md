@@ -48,11 +48,11 @@ Additional things that can/should be implemented
 - implement compression
 - security (things like path traversal, CSRF, HTTPS implementation, etc etc)
 
-## Minimal and Extemely basic HTTP Server
+## Minimal and Extremely basic HTTP Server
 
 > [!IMPORTANT]
-> this is just to glance at linearly. not even remotely robust. the src/main.rs
-> contains another version of similarly limited HTTP server.
+> this is just to glance at in linear manner. this is not even remotely robust.
+> the `src/main.rs` contains another version of similarly limited HTTP server.
 
 ```rust
 use std::fs::File;
@@ -151,6 +151,7 @@ fn handle_client(mut stream: TcpStream) {
                 stream.write_all(response.as_bytes()).unwrap();
             }
         }
+        // Repond with Internal Server Error when reading fails
         Err(e) => {
             eprintln!("Failed to read from stream: {}", e);
             let response = "HTTP/1.1 500 INTERNAL SERVER ERROR\r\nContent-Type: text/plain\r\n\r\nFailed to read request";
