@@ -164,3 +164,4 @@ function gameLoop() {
 
 startBall();
 gameLoop();
+
